@@ -1,0 +1,105 @@
+/* Splashscreen */
+#reg-button {
+	width: 280px;
+	margin-top: 80px;
+}
+
+.centered > div:first-child {
+	vertical-align: top;
+}
+
+/* Form */
+#reg-form {
+	width: 310px;
+	margin-top: 20px;
+}
+
+/* Tabs - FontAwesome */
+.rf-tabs {
+	padding: 0 2em;
+	font-size: 10px;
+}
+.rf-tabs span {
+	margin-right: 75px;
+}
+
+/* Tab pointer */
+#rf-tab-pointer {
+	margin: 10px 0 -10px 30px;
+}
+.pointer {
+	width: 11px;
+	height: 11px;
+}
+.pointer-step-1 {
+	-webkit-transform: translate(0,0);
+	transform: translate(0,0);
+}
+.pointer-step-2 {
+	-webkit-transform: translate(115px,0);
+	transform: translate(115px,0);
+}
+.pointer-step-3 {
+	-webkit-transform: translate(230px,0);
+	transform: translate(230px,0);
+}
+
+/* Steps container */
+.rf-steps .corner-all {
+	border-radius: 0;
+}
+
+/* Cells */
+.centered > div.rf-cell {
+	vertical-align: middle;
+}
+.rf-cell {
+	width: 100%;
+}
+
+/* Step 1 */
+.rf-cell.cell-inline {
+	font-size: 12px;
+}
+.cell-inline {
+	border-right: none;
+	border-bottom: 1px solid #d9d9d9;
+	height: 25%;
+}
+.cell-inline:last-child {
+	border-bottom: none;
+}
+
+.cell-inline .cell-title {
+	font-size: 16px;
+}
+.cell-inline .fa.fa-cell-valid { /* FontAwesome */
+	margin: 0.2em 0.2em 0 0;
+}
+.cell-inline .cell-invalid {
+	height: 30px;
+}
+.cell-inline .cell-usertext {
+	padding: 35px 10px 0;
+	border-radius: 0;
+	font-size: 20px;
+}
+.multicell .cell-inline:first-child .cell-usertext {
+	border-radius: 6px 6px 0 0;
+}
+
+.cell-inline .cell-padding {
+	padding: 10px 0 0 10px;
+}
+.cell-inline .cell-1row {
+	padding-bottom: 40px;
+}
+
+/* Buttons */
+#rf-buttons > input {
+	width: 101px;
+	font-size: 14px;
+}
+#rf-buttons > .rf-button-2 {
+	width: 102px;
+}

@@ -1,0 +1,341 @@
+/* Fonts */
+@font-face {
+	font-family: 'Roboto Regular';
+	src: url('../fonts/roboto-regular.ttf');
+}
+@font-face {
+	font-family: 'Roboto Light';
+	src: url('../fonts/roboto-light.ttf');
+}
+
+/* Tags */
+html {
+    height: 100%;
+    min-height: 640px;
+}
+body {
+	height: 100%;
+	margin: 0;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+a, div, input, textarea, span {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+input, textarea {
+	display: block;
+	margin: 0;
+	border: none;
+	outline: none;
+	resize: none;
+	overflow: hidden;
+}
+form {
+	text-align: left;
+}
+
+/* Splashscreen */
+.wrapper {
+	height: 100%;
+	background: url(../img/bg-img.jpg) center;
+	background-size: cover;
+	font: 14px 'Roboto Regular';
+	overflow: hidden;
+}
+
+.centered {
+	text-align: center;
+}
+.centered:before {
+	content: '';
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+.centered > div:first-child {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#reg-button {
+	width: 435px;
+	padding: 21px 0;
+	font-size: 24px;
+	color: #fff;
+	background-color: #009bbf;
+	box-shadow: 0 0 0 4px rgba(0,0,0,0.15);
+	cursor: pointer;
+}
+
+/* Overlay */
+#overlay {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	min-height: 640px;
+	background-color: rgba(0,0,0,0.7);
+	overflow: hidden;
+}
+
+/* Form */
+#reg-form {
+	opacity: 0;
+	width: 600px;
+}
+.show-form {
+	-webkit-animation: showForm 0.5s linear 0.25s both;
+  	animation: showForm 0.5s linear 0.25s both;
+}
+@-webkit-keyframes showForm {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+@keyframes showForm {
+  	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+/* Tabs - FontAwesome */
+.rf-tabs {
+	padding: 0 3.3em;
+	white-space: nowrap;
+	line-height: 4em;
+	height: 4em;
+	font-size: 15px;
+}
+.rf-tabs span {
+	margin-right: 162px;
+	vertical-align: middle;
+	cursor: pointer;
+	opacity: 0.3;
+}
+.rf-tabs span:last-child {
+	margin: 0;
+}
+.rf-tabs span:hover {
+	opacity: 0.6;
+	-webkit-animation: fa-spin 0.25s linear;
+  	animation: fa-spin 0.25s linear;
+}
+.rf-tabs span.tab-active {
+	opacity: 1;
+}
+
+/* Tab pointer */
+#rf-tab-pointer {
+	display: inline-block;
+	margin: 16px 0 -16px 60px;
+	-webkit-transition: -webkit-transform 0.25s ease;
+	transition: transform 0.25s ease;
+}
+.pointer {
+	width: 25px;
+	height: 25px;
+	background-color: #fff;
+	transform: rotate(45deg);
+}
+.pointer-step-1 {
+	-webkit-transform: translate(0,0);
+	transform: translate(0,0);
+}
+.pointer-step-2 {
+	-webkit-transform: translate(222px,0);
+	transform: translate(222px,0);
+}
+.pointer-step-3 {
+	-webkit-transform: translate(444px,0);
+	transform: translate(444px,0);
+}
+
+/* Steps container */
+.rf-steps {
+	position: relative;
+	height: 400px;
+	background-color: #fff;
+	overflow: hidden;
+}
+.rf-steps > div {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	font-size: 0; /* Remove spaces between inline elements. Need to restore options in child elements */
+    line-height: 0;
+    letter-spacing: -1px;
+	-webkit-transform: scale(0);
+	transform: scale(0);
+}
+.rf-steps > div:first-child {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+.show-step {
+	-webkit-animation: showStep 0.25s linear both;
+  	animation: showStep 0.25s linear both;
+}
+@-webkit-keyframes showStep {
+	0% { -webkit-transform: scale(0); }
+	100% { -webkit-transform: scale(1); }
+}
+@keyframes showStep {
+	0% { transform: scale(0); }
+	100% { transform: scale(1); }
+}
+
+.hide-step {
+	-webkit-animation: hideStep 0.25s linear both;
+  	animation: hideStep 0.25s linear both;
+}
+@-webkit-keyframes hideStep {
+	0% { -webkit-transform: scale(1); }
+	100% { -webkit-transform: scale(0); }
+}
+@keyframes hideStep {
+	0% { transform: scale(1); }
+	100% { transform: scale(0); }
+}
+
+/* Cells */
+.rf-cell {
+	position: relative;
+	display: inline-block;
+	width: 50%;
+	height: 50%;
+	border: 1px solid #d9d9d9;
+	color: #959595;
+	font-size: 14px;
+    line-height: normal;
+    letter-spacing: normal;
+}
+.centered > .rf-cell {
+	text-align: left;
+}
+
+/* Step 1 */
+.cell-inline { /* table-look cell */
+	border-top: none;
+	border-left: none;
+	border-radius: 0;
+	vertical-align: bottom;
+}
+.cell-title {
+	display: inline-block;
+	font: 20px 'Roboto Light';
+}
+.cell-usertext {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background-color: transparent;
+	padding: 44px 20px 0;
+	font: 24px 'Roboto Regular';
+}
+.cell-usertext:focus {
+	box-shadow: inset 0 0 0 2px #00b3e3;
+}
+.fa.fa-cell-valid { /* FontAwesome */
+	margin: 0.5em 0.5em 0 0;
+	color: #00b551;
+}
+.cell-invalid {
+	position: absolute;
+	bottom: 0;
+	height: 80px;
+	width: 100%;
+	background-color: #ff5a5a;
+	color: #fff;
+}
+.cell-padding { /* padding of any text block in cell*/
+	padding: 18px 0 0 20px;
+}
+.cell-bottom { 
+	border-bottom: none;
+}
+.cell-right {
+	border-right: none;
+}
+.cell-1row { /* for 1-row input like text, password and etc. Fills bottom place of cell to restore input line height and text type position */
+	padding-bottom: 123px;
+}
+
+/* Step 2 */
+.upload {
+	opacity: 0;
+	color: transparent;
+	line-height: 40em;
+	font-size: 40em;
+}
+.fa-cell-centered { /* FontAwesome */
+	display: block;
+	text-align: center;
+	font-size: 120px;
+	margin-top: 19px;
+}
+
+/* Buttons */
+#rf-buttons {
+	font-size: 0;
+    line-height: 0;
+    letter-spacing: -1px;
+}
+#rf-buttons > input {
+	display: inline-block;
+	width: 199px;
+	margin: 3px 3px 0 0;
+	padding: 15px 0;
+	font-size: 20px;
+	color: #fff;
+	line-height: 1em;
+	letter-spacing: normal;
+	vertical-align: bottom;
+	opacity: 0.7;
+	cursor: pointer;
+}
+#rf-buttons > input:hover {
+	opacity: 1;
+}
+#rf-buttons > input:active {
+	opacity: 1;
+	padding: 17px 0 13px;
+}
+#rf-buttons > input:last-child {
+	margin: 3px 0 0;
+}
+#rf-buttons > .rf-button-1 {
+	background-color: #f09f55;
+}
+#rf-buttons > .rf-button-2 {
+	background-color: #4cc1e1;
+	width: 196px;
+}
+#rf-buttons > .rf-button-3 {
+	background-color: #6dcb99;
+}
+
+/* Round corners */
+.corner-all {
+	border-radius: 6px;
+}
+.corner-tl {
+	border-top-left-radius: 6px;
+}
+.corner-tr {
+	border-top-right-radius: 6px;
+}
+.corner-bl {
+	border-bottom-left-radius: 6px;
+}
+.corner-br {
+	border-bottom-right-radius: 6px;
+}
+
+.hidden {
+	display: none;
+}

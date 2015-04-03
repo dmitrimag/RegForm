@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+	<title>SuperJob 15/03 Registration Form</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/mobile.css" media="only screen and (min-device-width:320px) and (max-device-width:640px)">
+	<!--[if IE 9]>
+		<link rel="stylesheet" href="css/ie9.css">
+		<script src="js/classList.js"></script>
+	<![endif]-->
+	<script src="js/fastclick.js"></script>
+	<script src="js/script.js"></script>
+</head>
+<body>
+	<!--Main wrapper-->
+	<div class="wrapper centered">
+
+		<!--Registration button-->
+		<div id="reg-button" class="corner-all">Зарегистрироваться</div>
+
+		<!--Hidden overlay-->
+		<div id="overlay" class="hidden centered">
+
+			<!--Registration form (rf)-->
+			<div id="reg-form">
+				<form name="form" method="post" enctype="multipart/form-data">
+
+					<!--Tabs-->
+					<div id="rf-tabs" class="rf-tabs">
+						<span id="tab1" class="fa fa-4x fa-inverse fa-user tab-active"></span>
+						<span id="tab2" class="fa fa-4x fa-inverse fa-image"></span>
+						<span id="tab3" class="fa fa-4x fa-inverse fa-check"></span>
+					</div>
+
+					<!--Tabs pointer-->
+					<div id="rf-tab-pointer" class="pointer-step-1">
+						<div class="pointer"></div>
+					</div>
+
+					<!--Steps container-->
+					<div class="rf-steps corner-tl corner-tr">
+
+						<!--Step 1-->
+						<div id="rf-step-1" class="multicell show-step">
+							<div class="rf-cell cell-inline">
+								<span class="cell-title cell-padding">Имя</span>
+								<span class="fa fa-2x fa-check pull-right fa-cell-valid hidden"></span>
+								<div class="cell-invalid cell-padding  hidden">Имя не указано</div>
+								<textarea name="firstname" class="cell-usertext corner-tl" maxlength="64" cols="20"></textarea>
+							</div>
+							<div class="rf-cell cell-inline cell-right">
+								<span class="cell-title cell-padding">Фамилия</span>
+								<span class="fa fa-2x fa-check pull-right fa-cell-valid hidden"></span>
+								<div class="cell-invalid cell-padding  hidden">Фамилия не указана</div>
+								<textarea name="lastname" class="cell-usertext corner-tr" maxlength="64" cols="20"></textarea>
+							</div>
+							<div class="rf-cell cell-inline cell-bottom">
+								<span class="cell-title cell-padding">Эл. почта</span>
+								<span class="fa fa-2x fa-check pull-right fa-cell-valid hidden"></span>
+								<div class="cell-invalid cell-padding  hidden">Адрес электронной почты указан неверно</div>
+								<textarea name="email" class="cell-usertext" maxlength="64" cols="20" data-pattern="\S+@\S+\.\S+"></textarea>
+							</div>
+							<div class="rf-cell cell-inline cell-bottom cell-right">
+								<span class="cell-title cell-padding">Пароль</span>
+								<span class="fa fa-2x fa-check pull-right fa-cell-valid hidden"></span>
+								<div class="cell-invalid cell-padding  hidden">Пароль слишком короткий</div>
+								<input type="password" name="password" class="cell-usertext cell-1row" maxlength="64" cols="20">
+							</div>
+						</div>
+
+						<!--Step 2-->
+						<div id="rf-step-2" class="centered">
+							<div class="rf-cell corner-all">
+								<span class="cell-title cell-padding">Загрузить изображение</span>
+								<span class="fa fa-2x fa-check pull-right fa-cell-valid hidden"></span>
+								<div id="step2-cell-placeholder" class="fa fa-image fa-cell-centered"></div>
+								<div id="step2-cell-value" class="cell-padding hidden"></div>
+								<input type="file" name="fileImage" class="cell-usertext upload" accept="image/jpeg,image/png,image/gif">
+							</div>
+						</div>
+
+						<!--Step 3-->
+						<div id="rf-step-3" class="centered">
+							<div class="rf-cell corner-all">
+								<span class="cell-title cell-padding">Подтвердите пароль</span>
+								<span class="fa fa-2x fa-check pull-right fa-cell-valid hidden"></span>
+								<div class="cell-invalid cell-padding corner-bl corner-br hidden">Пароли не совпадают</div>
+								<input type="password" name="passwordRepeat" class="cell-usertext cell-1row corner-all" maxlength="64" cols="20">
+							</div>
+						</div>
+
+					</div>
+
+					<!--Buttons-->
+					<div id="rf-buttons">
+						<input type="button" class="rf-button-1 corner-bl" value="Отменить" data-action="cancel">
+						<input type="button" class="rf-button-2" value="Назад" data-action="backStep">
+						<input type="submit" class="rf-button-3 corner-br" value="Продолжить" data-action="nextStep">
+					</div>
+
+				</form>
+			</div>
+			<!--End of Registration form (rf)-->
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+/* Replace animation with simple css properties in IE 9 */
+
+/* Show form */
+#reg-form.show-form {
+	opacity: 1;
+}
+
+/* Steps */
+.rf-steps > div {
+	-ms-transform: scale(0);
+}
+.rf-steps > div:first-child {
+	-ms-transform: scale(1);
+}
+.rf-steps > div.show-step {
+	-ms-transform: scale(1);
+}
+.rf-steps > div.hide-step {
+	-ms-transform: scale(0);
+}
